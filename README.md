@@ -1,157 +1,127 @@
-# PRG1: From Pseudocode & Flowcharts to Python
+# Day 1: Questions on the three examples
 
-This repository contains Python programs that you will explore using the **PRIMM methodology** (Predict, Run, Investigate, Modify, Make). Each program corresponds to a flowchart and demonstrates key programming concepts.
+You have three short Python programs in this Codespace:
 
-## 📋 Programs Overview
+- `example1.py`
+- `example2.py`
+- `example3.py`
 
-| Program | Concept | Description |
-|---------|---------|-------------|
-| `01netflix_binge_sequence.py` | **Sequence** | Calculate binge-watching time |
-| `02gaming_achievement_selection.py` | **Selection** | Determine gaming achievements |
-| `03spotify_playlist_iteration.py` | **Iteration** | Analyse playlist moods |
-| `04social_media_mixed.py` | **Mixed Concepts** | Social media engagement |
-| `05food_delivery_mixed.py` | **Mixed Concepts** | Food delivery calculator |
+You are not being asked to write any code today. You are being asked to read
+these, run them, and work out what they do and why they do it that way.
 
-## 🎯 PRIMM Activities
+## How to work through this
 
-### **P - PREDICT** 📝
-Before running each program:
-1. Study the corresponding flowchart in the `flowcharts/` folder
-2. Read through the Python code
-3. **Predict** what will happen when you run it with these inputs:
+1. Run the program first, before reading it properly. Watch what it does.
+2. Then read it line by line and match it against the pseudocode and flowchart
+   you worked through with your partner.
+3. Answer the questions out loud with your partner before writing anything
+   down. If you cannot say it out loud, you do not understand it yet.
+4. Where a question says "predict first", commit to an answer before you run
+   it. Getting a prediction wrong is far more useful than getting it right.
 
-**Program 1 (Netflix):**
-- Series: "Stranger Things"
-- Episodes per season: 8
-- Seasons: 4
-- Episode length: 50 minutes
+To run a program, open the terminal and type, for example:
 
-**Program 2 (Gaming):**
-- Score: 12000
-- Hours played: 60
-- Enemies defeated: 800
-
-**Program 3 (Spotify):**
-- Playlist: "My Vibes"
-- Songs: 5
-- Moods: happy, sad, energetic, happy, chill
-
-### **R - RUN** ▶️
-Run each program and check your predictions:
-```bash
-python 01netflix_binge_sequence.py
-python 02gaming_achievement_selection.py
-python 03spotify_playlist_iteration.py
+```
+python example1.py
 ```
 
-### **I - INVESTIGATE** 🔍
-Answer these questions after running:
-
-**Program 1:**
-- How does the program calculate total hours?
-- What happens if you enter 0 seasons?
-
-**Program 2:**
-- Which condition is checked first in the if-elif chain?
-- What achievement would you get with score=6000, hours=15, enemies=500?
-
-**Program 3:**
-- How does the counter system work?
-- What determines the "Overall mood"?
-
-##
-## 📢 Friendly message. 📢 If you have limited programming experience, some of the following tasks might seem hard at this moment in time. Don't worry! Pick and choose!
-
-### **M - MODIFY** ✏️
-Make these changes:
-
-**Program 1:**
-- Add a calculation for "episodes per day" if watched over a week
-- Include a warning if total days > 7
-
-**Program 2:**
-- Add a new achievement level: "Legend" (score ≥ 15000 AND hours ≥ 100)
-- Add input validation for negative numbers
-
-**Program 3:**
-- Add a new mood category: "romantic"
-- Calculate and display the most common mood
-
-### **M - MAKE** 🛠️
-Create your own programs:
-
-**Sequence Programs:**
-1. **YouTube Watch Time Calculator**
-   - Input: videos watched, average length
-   - Output: total time, equivalent in days
-
-2. **Commute Cost Calculator**
-   - Input: distance, fuel price, car efficiency
-   - Output: daily/weekly/monthly costs
-
-3. **Pizza Party Planner**
-   - Input: guests, slices per person, slices per pizza
-   - Output: pizzas needed, total cost
-
-**Selection Programs:**
-4. **Grade Calculator**
-   - Input: test scores
-   - Output: letter grade using if-elif
-
-5. **Cinema Ticket Pricer**
-   - Input: age, day of week, time
-   - Output: ticket price with discounts
-
-6. **Weather Outfit Suggester**
-   - Input: temperature, weather condition
-   - Output: clothing recommendations
-
-**Iteration Programs:**
-7. **Shopping List Analyser**
-   - Input: items and prices
-   - Output: total cost, most expensive item
-
-8. **Fitness Tracker**
-   - Input: daily steps for a week
-   - Output: total steps, average, best day
-
-9. **Book Reading Progress**
-   - Input: pages read each day
-   - Output: total pages, reading streak
-
-**Mixed Concept Programs:**
-10. **Student Timetable Analyser**
-    - Input: subjects, hours per week
-    - Output: workload assessment, study recommendations
-
-11. **Holiday Budget Calculator**
-    - Input: destination, days, daily budget
-    - Output: total cost, spending categories
-
-## 🚀 Getting Started
-
-1. Fork this repository
-2. Start with the flowcharts to understand the logic
-3. Follow the PRIMM activities in order
-4. Use Python 3 to run the programs
-
-## 💡 Learning Objectives
-
-By completing these activities, you will:
-- Understand sequence, selection, and iteration
-- Practice reading and tracing code
-
-Some of you will be able to start:
-- Learn to modify existing programs
-- Build confidence in writing new programs
-- Connect visual flowcharts to Python syntax
-
-## 📁 File Structure
-```
-├── flowcharts/           # Visual representations
-├── 01-05*.py            # Python programs
-└── README.md            # This guide
-```
+If `python` is not recognised, use `python3` instead.
 
 ---
-*Remember: Programming is about problem-solving. Take time to understand each concept before moving to the next!*
+
+## Example 1: Taxi Fare Calculator
+
+Run it with a distance of `4` miles and a waiting time of `10` minutes.
+
+1. Some of the names in this program are written in capitals and some in lower
+   case. What is the difference between the two groups? How could you work
+   that out from the code alone, without anyone telling you?
+
+2. Look at the line that collects the distance. It has `float(...)` wrapped
+   around `input(...)`. Predict what would happen if you removed `float` and
+   its brackets, then try it. Why does it behave that way?
+
+3. The taxi firm puts its per-mile rate up to £1.45. Which single line changes?
+   Which lines definitely do not?
+
+4. Run it again and type a negative distance, such as `-5`. What does the
+   program do?
+
+> **Something to think about**
+>
+> The program accepted the negative distance quite happily and gave you an
+> answer. Is that a fault in the program, or is it working exactly as it was
+> written? Those are two different questions, and the difference between them
+> is most of what debugging actually is.
+
+---
+
+## Example 2: Free Delivery Checker
+
+Run it twice. First with an order total of `25` and a weight of `12`. Then
+with an order total of `45` and a weight of `15`.
+
+1. In the second run, the order is over the free delivery threshold **and**
+   it is heavy. Which delivery charge did the program apply, and which line of
+   code decided that?
+
+2. Find the decision that can only ever be reached when the first decision was
+   false. How can you tell, just from reading, that it is unreachable
+   otherwise?
+
+3. The pseudocode has `ENDIF` to mark where each branch finishes. This Python
+   has nothing of the sort. So how does Python know where a branch stops?
+
+4. Predict, then check: an order total of exactly `40` with a weight of `20`.
+   Which charge applies, and why does the exact boundary matter?
+
+> **Something to think about**
+>
+> Once free delivery applies, weight is never checked at all. A 30kg order
+> over £40 ships free. Is that a mistake in the code, or a decision the shop
+> made? You cannot tell by reading the program. Think about what you would
+> need to know, and who you would have to ask, to find out. This is the
+> everyday reality of reading code you did not write.
+
+---
+
+## Example 3: Fitness App Rep Counter
+
+Run it with a target of `5`. Press Return three times, then type `STOP`.
+
+1. This loop can finish in two completely different ways. What are they? Which
+   one happened in the run above?
+
+2. What is `user_stopped` actually for? The loop already checks the rep count,
+   so why is a second thing being tracked at all?
+
+3. Predict first, then run it: set the target to `0`. Does the loop body run
+   even once? What message do you get? Is that message honest?
+
+4. In the pseudocode this program uses `DETECT` rather than `INPUT`, because
+   the signal is meant to come from a sensor on a phone, not from someone
+   typing. The Python uses `input()` because there is no sensor here. Does
+   swapping one for the other change the logic of the program in any way?
+
+> **Something to think about**
+>
+> This loop checks its condition *before* running the body, which is why a
+> target of `0` behaves the way it does. Some languages offer a loop that
+> checks its condition at the end instead, so the body always runs at least
+> once. What kind of program would actually want that? Do not try to settle
+> this now. We come back to it properly when we cover iteration.
+
+---
+
+## Across all three
+
+- Which of the three programs would be hardest to explain to someone who has
+  never seen code before? What specifically makes it harder?
+
+- Every one of these programs trusts whoever is typing to enter something
+  sensible. Pick each program in turn and find one input that would break it
+  or produce nonsense. You do not need to fix anything, just find them.
+
+- If you had to describe what each program does in a single sentence, without
+  using any of the variable names, could you? Try it. That is the skill this
+  whole module is built around.
